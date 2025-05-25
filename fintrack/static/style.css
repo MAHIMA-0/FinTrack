@@ -1,0 +1,44 @@
+a:hover{
+color:green;
+font-size: 20px;
+}
+
+li,links{
+margin:20px;
+display:inline;
+}
+
+a{
+color:black;}
+
+.container{
+margin-left:40%;
+margin-right:30%;
+margin-top:5%;
+}
+
+h2,h4{
+text-align:center;
+}
+
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="password"] {
+    width: 100%;
+    padding: 5px;
+}
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+
+    th, td {
+        padding: 10px;
+        text-align: left;
+    }
+
+

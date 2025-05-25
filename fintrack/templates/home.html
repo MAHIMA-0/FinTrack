@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %} Homepage {% endblock %}
+{% block content %}
+<h2><u>WELCOME TO FINTRACK</u></h2>
+<h4><i>Your trusted finance partner</i></h4>
+
+<h4><i><b>"We track your finances with delicacy and care.."</b></i><hr></h4>
+    <a href="{{url_for('register')}}">Register to join us</a><br>
+    <a href="{{url_for('login')}}">Login and access your finance</a>
+    {% endblock %}

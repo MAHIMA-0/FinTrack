@@ -1,0 +1,9 @@
+Flask
+render_template
+request redirect
+session
+url_for
+flash
+mysql.connector
+import generate_password_hash
+check_password_hash

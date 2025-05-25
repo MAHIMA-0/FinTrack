@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}Monthly Report{% endblock %}
+
+{% block content %}
+<h2>Report for {{ month }}/{{ year }}</h2>
+
+<p><strong>Total Income:</strong> ₹{{ income or 0 }}</p>
+<p><strong>Total Expense:</strong> ₹{{ expense or 0 }}</p>
+<p><strong>Balance:</strong> ₹{{ (income or 0) - (expense or 0) }}</p>
+
+<!-- Profit or Loss Status -->
+{% if income is not none and expense is not none %}
+    {% if income > expense %}
+        <p style="color: green; font-weight: bold;">✅ Profit this month: ₹{{ income - expense }}</p>
+    {% elif income < expense %}
+        <p style="color: red; font-weight: bold;">❌ Loss this month: ₹{{ expense - income }}</p>
+    {% else %}
+        <p style="color: orange; font-weight: bold;">⚠️ No Profit, No Loss</p>
+    {% endif %}
+{% else %}
+    <p style="color: gray;">No data available to generate profit/loss report.</p>
+{% endif %}
+
+
+<br>
+<a href="{{ url_for('dashboard') }}">← Back to Dashboard</a>
+{% endblock %}
